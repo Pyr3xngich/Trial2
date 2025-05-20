@@ -7,9 +7,69 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Inline styles to ensure navbar works correctly */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        .sticky-header .logo {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .sticky-header .logo span {
+            color: #e74c3c;
+        }
+        
+        .sticky-header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .sticky-header ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sticky-header ul li {
+            margin-left: 20px;
+        }
+        
+        /* Make navigation links explicitly visible */
+        .sticky-header ul li a {
+            color: #333 !important; /* Force color override */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 5px 10px;
+        }
+        
+        .sticky-header ul li a:hover {
+            color: #e74c3c !important;
+        }
+        
+        /* Add padding to body to prevent content from hiding behind fixed header */
+        body {
+            padding-top: 70px; /* Adjust based on your header height */
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <div class="container">
             <nav>
                 <div class="logo">Infusion <span>Jaba</span> Juice</div>
